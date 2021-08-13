@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="At NG-Next tech we are revolutionizing Digital Assets Exchanges.">
+    <meta name="author" content="Ng Next Tech">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Landing page || Ng Next Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header section-->
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo of Ng Next Tech">
+            <span>Mountains Calling</span>
+        </div>
+        <div class="target__link">
+            <ul>
+                <li><a href="javascript:;">Home</a></li>
+                <li><a href="javascript:;">Benefits</a></li>
+                <li><a href="javascript:;">Testimonials</a></li>
+                <li><a href="javascript:;">Pricing</a></li>
+                <li><a href="javascript:;">Contact</a></li>
+            </ul>
+            <div class="login">
+                <button>register</button>
+            </div>
+        </div>
+    </header>
+    <!--End header section-->
+    <!--Background wrapper-->
+    <section class="background__wrapper">
+        <img src="img/Background_final1.png" class="img-bg one" id="id2">
+        <img src="img/Foreground1.png" class="img-bg two" id="id3">
+        <div class="background__wrapper-info" id="id4">
+            <h3>wanderlust !</h3>
+            <p>Over 60,000 nature trails and campsites around you.</p>
+        </div>
+        <a href="#target">
+            <div class="background__wrapper-icons bounce">
+                <img src="img/down-arrow.png">
+            </div>
+        </a>
+    </section>
+    <!--End background wrapper-->
+    <!--Product section-->
+    <section class="product__category" id="target">
+        <h4 class="product__category-info">
+            Get away from your crazy work schedule and <br>breath pure oxygen. Enjoy bird whistles, serene <br>views &
+            capture these moments.
+        </h4>
+        <div class="product__category-img">
+            <div class="item" data-scroll>
+                <img src="img/img1.jpeg">
+                <p>Recharge</p>
+            </div>
+            <div class="item" data-scroll>
+                <img src="img/img2.jpeg">
+                <p>Meet</p>
+            </div>
+            <div class="item" data-scroll>
+                <img src="img/img3.jpeg">
+                <p>Experience</p>
+            </div>
+            <div class="item" data-scroll>
+                <img src="img/img4.jpeg">
+                <p>Capture</p>
+            </div>
+        </div>
+
+    </section>
+    <!--End product section-->
+    <script src="https://unpkg.com/splitting@1.0.0/dist/splitting.js"></script>
+    <script src="https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js"></script>
+    <script>
+        let id2 = document.getElementById('id2');
+        let id3 = document.getElementById('id3');
+        let id4 = document.getElementById('id4');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            id2.style.top = value * 0.15 + 'px';
+            id3.style.top = value * 0.25 + 'px';
+            id4.style.top = value * 0.25 + 'px';
+        });
+
+        Splitting();
+
+        ScrollOut({
+            threshold: 0.3,
+            once: true
+        });
+    </script>
+</body>
+
+</html>
